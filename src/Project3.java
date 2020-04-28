@@ -10,7 +10,7 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class Project3 extends JPanel {
+public class Project3 extends JFrame {
         private JLabel shapeTypeLabel = new JLabel("Shape Type");
         private JLabel fillTypeLabel = new JLabel("Fill Type");
         private JLabel colorLabel = new JLabel("Color");
@@ -35,7 +35,14 @@ public class Project3 extends JPanel {
         private JTextField ycoordField = new JTextField("");
 
         public Project3() {
+            super("Draw Shapes!");
+            gui();
+        }
+
+        public void gui() {
+            setSize(475, 300);
             setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             JPanel shapeConfigPanel = new JPanel();
             shapeConfigPanel.setMaximumSize(new Dimension(200,200));
@@ -79,7 +86,6 @@ public class Project3 extends JPanel {
             add(Box.createRigidArea(new Dimension(450,5)));
             add(drawButton);
             add(Box.createRigidArea(new Dimension(450,10)));
-//            add(new GeometricDrawPanel());
         }
 
         private Shape getShapeInfo(Drawing panel) throws NumberFormatException, OutsideBounds {
@@ -122,9 +128,8 @@ public class Project3 extends JPanel {
 
     public static void main(String[] args) {
         JFrame project3 = new JFrame("Geometric Drawing");
-        project3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         project3.setVisible(true);
+        project3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         project3.setSize(475, 300);
-
     }
 }

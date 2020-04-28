@@ -8,12 +8,12 @@ Brief Purpose of the Program: program that draws two types of shapes, ovals and 
 import java.awt.*;
 
 public class Oval extends Shape {
-public Oval(Rectangle r, Color c, Boolean solid) {
-        super(c, solid, r.getLocation(), new Dimension((int) r.getWidth(), (int) r.getHeight()));
-        }
+        public Oval(Rectangle r, Color c, Boolean solid) {
+                super(c, solid, r.getLocation(), new Dimension((int) r.getWidth(), (int) r.getHeight()));
+                }
 
-// Draw method takes in Graphics object
-public void draw(Graphics o) {
+        // Draw method takes in Graphics object
+        public void draw(Graphics o) {
 
-        }
-        }
+                }
+                }
